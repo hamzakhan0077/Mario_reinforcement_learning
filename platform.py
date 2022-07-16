@@ -10,10 +10,9 @@ class Platform(pygame.sprite.Sprite):
         self.pos_y = pos_y
         self.rect = self.image.get_rect()
         self.rect.topleft = [self.pos_x, self.pos_y]
+
     def update(self):
         pass
-
-
 
 
 class Castle(pygame.sprite.Sprite):
@@ -31,3 +30,26 @@ class Castle(pygame.sprite.Sprite):
 
 
 
+class Cloud(pygame.sprite.Sprite):
+    def __init__(self,pos_x,pos_y):
+        super().__init__()
+        self.image = pygame.transform.scale(pygame.image.load('data/cloud.png'), (64,48))
+        self.pos_x = pos_x
+        self.pos_y = pos_y
+        self.rect = self.image.get_rect()
+        self.rect.topleft = [self.pos_x, self.pos_y]
+
+    def update(self):
+        pass
+
+
+class Bush(pygame.sprite.Sprite):
+    def __init__(self,pos_x,pos_y):
+        super().__init__()
+        self.image = pygame.transform.scale(pygame.image.load('data/bush-1.png'), (128,32))
+        self.pos_x = pos_x
+        self.pos_y = pos_y
+        self.rect = self.image.get_rect()
+        self.rect.topleft = [self.pos_x, self.pos_y]
+    def update(self):
+        pass
